@@ -128,10 +128,10 @@ echo "postfix postfix/mailname string $CFG_HOSTNAME_FQDN" | debconf-set-selectio
 echo "iptables-persistent iptables-persistent/autosave_v4 boolean true" | debconf-set-selections
 echo "iptables-persistent iptables-persistent/autosave_v6 boolean true" | debconf-set-selections
 DEBIAN_FRONTEND=noninteractive apt -y install vim chrony openssh-server screen net-tools git mc postfix sendemail tmux \
-    sudo wget curl ethtool iptraf-ng traceroute telnet rsyslog software-properties-common \
+    libvirt-clients libvirt-daemon sudo wget curl ethtool iptraf-ng traceroute telnet rsyslog software-properties-common \
     dirmngr parted gdisk apt-transport-https lsb-release ca-certificates quota qemu-kvm mysql-server iputils-ping \
-    bridge-utils iptables jq conntrack htop nmap nfs-kernel-server gnupg nfs-common socat ipset \
-    rsyslog-kubernetes kubetail kubecolor ebtables elinks openvswitch-switch iftop vnstat
+    libvirt-daemon-system bridge-utils iptables jq conntrack htop nmap nfs-kernel-server gnupg nfs-common socat ipset \
+    qemu rsyslog-kubernetes kubetail kubecolor ebtables elinks openvswitch-switch iftop vnstat
 
 # Disable swap for Kubernetes
 sed -i '/swap/s/^/#/' /etc/fstab
