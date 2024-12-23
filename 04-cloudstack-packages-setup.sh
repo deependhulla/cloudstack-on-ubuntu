@@ -13,3 +13,10 @@ chmod +x /usr/bin/cmk
 
 apt-get update
 
+apt-get install -y cloudstack-management cloudstack-usage cloudstack-agent
+
+
+cloudstack-setup-databases cloud:cloud@localhost --deploy-as=root:
+cloudstack-setup-management
+
+echo "Access CloudStack UI at: http://<HOST_IP>:8080/client with username 'admin' and password 'password'";
