@@ -1,0 +1,9 @@
+Make sure
+in /etc/hosts , you habe FQDN example 
+192.168.1.1 cloudstack.deepen.in cloudstack
+
+and in /etc/hostname as 
+cloudstack.deepen.in
+
+
+
