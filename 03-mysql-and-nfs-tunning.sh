@@ -32,10 +32,7 @@ service nfs-kernel-server restart
 ### KVM
 
 sed -i -e 's/\#vnc_listen.*$/vnc_listen = "0.0.0.0"/g' /etc/libvirt/qemu.conf
-if ! grep '^LIBVIRTD_ARGS="--listen"' /etc/default/libvirtd > /dev/null; then
     echo LIBVIRTD_ARGS=\"--listen\" >> /etc/default/libvirtd
-fi
-if ! grep 'listen_tcp=1' /etc/libvirt/libvirtd.conf > /dev/null; then
   echo 'listen_tcp=1' >> /etc/libvirt/libvirtd.conf
   echo 'listen_tls=0' >> /etc/libvirt/libvirtd.conf
   echo 'tcp_port = "16509"' >> /etc/libvirt/libvirtd.conf
