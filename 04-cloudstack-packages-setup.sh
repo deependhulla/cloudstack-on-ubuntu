@@ -21,3 +21,6 @@ cloudstack-setup-management
 
 echo "After 15-20 min ...."
 echo "Access CloudStack UI at: http://<HOST_IP>:8080/client with username 'admin' and password 'password'";
+
+
+## for More tech Info Checkout.
